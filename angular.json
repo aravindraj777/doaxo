@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "doaxo:build:production"
+              "buildTarget": "doaxo:build:production"
             },
             "development": {
-              "browserTarget": "doaxo:build:development"
+              "buildTarget": "doaxo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "doaxo:build"
+            "buildTarget": "doaxo:build"
           }
         },
         "test": {
