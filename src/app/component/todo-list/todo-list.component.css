@@ -1,0 +1,126 @@
+/* 
+.todo-container{
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0 ,0,0.2);
+}
+
+.todo-form{
+    display: flex;
+    margin-bottom: 10px;
+
+}
+
+.todo-form input[type="text"]{
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.todo-form button{
+    padding: 8px 16px;
+    margin-left: 10px;
+    background-color: #4caf50;
+    color: #fff;
+}
+ */
+
+
+/* Reset some default browser styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the container with a gradient background */
+  .todo-container {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #833ab4, #e1306c); /* Instagram purple gradient */
+    border-radius: 10px;
+    border: solid 20px plum;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+  
+  /* Style the heading */
+  h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the form */
+  .todo-form {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  button {
+    background-color: #fd79a8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #d63031;
+  }
+  
+  /* Style the todo list */
+  .todo-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Style individual todo items */
+  .todo-list li {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-bottom: 10px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px; /* Add space to the right of the checkbox */
+  }
+  
+  /* Style completed todo items */
+  span.completed {
+    text-decoration: line-through;
+    color: #dfe6e9;
+  }
+  
+  /* Style remove button */
+  .remove-button {
+    background-color: #e84393;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin-left: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .remove-button:hover {
+    background-color: #d63031;
+  }
+  
