@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Todo } from 'src/app/models/todo.model';
 import { Store } from '@ngrx/store';
-import { addTodo, removeTodo } from 'src/app/store/actions/todo.action';
+import { addTodo, removeTodo, toggleTodo } from 'src/app/store/actions/todo.action';
 
 @Component({
   selector: 'app-todo-list',
@@ -39,12 +39,12 @@ addTodo():void {
 }
 
 toggleTodo(id:string):void{
-  this.store.dispatch(removeTodo({id}))
+  this.store.dispatch(toggleTodo({id}))
 }
 
 
 removeTodo(id:string):void{
-
+  this.store.dispatch(removeTodo({id}))
 }
 
 
