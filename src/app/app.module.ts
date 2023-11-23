@@ -8,6 +8,9 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
 import { TodoReducer } from './store/reducers/todo.reducer';
 import { TodoListComponent } from './component/todo-list/todo-list.component';
+import { EffectsModule } from '@ngrx/effects';
+import { TodoEffects } from './store/effects/todo.effects';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { TodoListComponent } from './component/todo-list/todo-list.component';
     AppRoutingModule,
     FormsModule,
     StoreDevtoolsModule.instrument({maxAge:25}),
-    StoreModule.forRoot({todos:TodoReducer})
+    StoreModule.forRoot({todos:TodoReducer}),
+    EffectsModule.forRoot([TodoEffects]),
+    HttpClientModule
 
   ],
   providers: [],

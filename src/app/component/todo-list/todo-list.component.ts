@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Todo } from 'src/app/models/todo.model';
 import { Store } from '@ngrx/store';
-import { addTodo, removeTodo, toggleTodo } from 'src/app/store/actions/todo.action';
+import { addTodo, loadTodos, removeTodo, toggleTodo } from 'src/app/store/actions/todo.action';
 
 @Component({
   selector: 'app-todo-list',
@@ -11,7 +11,7 @@ import { addTodo, removeTodo, toggleTodo } from 'src/app/store/actions/todo.acti
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.css'
 })
-export class TodoListComponent {
+export class TodoListComponent implements OnInit{
 
   todos$!:Todo[];
   newTodoTitle=''
@@ -20,6 +20,10 @@ export class TodoListComponent {
     store.select('todos').subscribe((todoState:{todos:Todo[]})=>{
       this.todos$ = todoState.todos;
     })
+  }
+
+  ngOnInit(){
+    this.store.dispatch(loadTodos({todos:this.todos$}))
   }
 
 addTodo():void {
